@@ -1,0 +1,19 @@
+name: Testing with devbox
+run-name: ${{ github.actor }} DevBox Demo
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install devbox
+        uses: jetify-com/devbox-install-action@v0.14.0
+
+      - name: Run arbitrary commands
+        run: devbox run -- echo "done!"
+
+      - name: Run a script called test
+        run: devbox run test
