@@ -11,7 +11,7 @@
     ],
     "scripts": {
       "test": [
-        "TERM=vt100 $PWD/example.bats --formatter pretty --report-formatter junit -o $PWD/out || true"
+        "TERM=vt100 $PWD/wp.sh --formatter pretty --report-formatter junit -o $PWD/out || true"
       ]
     }
   }
