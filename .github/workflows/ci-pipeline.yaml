@@ -28,3 +28,11 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         with:
           report_paths: '**/out/*.xml'
+
+      - name: Publish Test Results v2
+        uses: EnricoMi/publish-unit-test-result-action@3a74b2957438d0b6e2e61d67b05318aa25c9e6c6 # v2.20.0
+        if: always()
+        with:
+          check_run: false
+          files: |
+            out/*.xml
