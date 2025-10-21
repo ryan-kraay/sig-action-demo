@@ -3,6 +3,10 @@ run-name: ${{ github.actor }} DevBox Demo
 
 on: [push]
 
+permissions:
+  # Needed by junit-report
+  checks: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
