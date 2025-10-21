@@ -6,6 +6,8 @@ on: [push]
 permissions:
   # Needed by junit-report
   checks: write
+  # Needed by EncricoMi
+  pull-requests: write
 
 jobs:
   test:
